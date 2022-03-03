@@ -25,6 +25,7 @@
         
         function clc2(){
             let text44=document.getElementById("text4").value;
+            
             var phoneno = /^\d{10}$/;
             // var pattern=/[789][0-9]{9}/;
             var pattern="[789][0-9]{9}";
@@ -41,6 +42,7 @@
                 document.getElementById('verify3').style.color='green'
                 document.getElementById('verify3').innerText="verified!!!";
                 document.getElementById('cont-1').style.display="block"
+               
             }
             else{
                 document.getElementById('verify3').style.color='red'
@@ -68,9 +70,17 @@
             }
 
         }
+        // function change1(){
+        //     // document.getElementsById('verify2').style.display="border";
+        //     console.log('hry')
+        //     document.getElementsById('verify2').style.display='inline-block;';
+               
+        //      }
         
     </script>
     <style>
+        
+
          
         .container-1{
           
@@ -144,23 +154,23 @@
             font-size: 30px;
             color: blue;
         }
-        .div-main{
+        .signupFrm{
             width: 30%;
             margin: auto;
             
         }
-        .input-1{
-            border: none;
+        .input{
+            border: 1px solid grey;
             width: 78%;
             /* margin-bottom: 10px; */
         }
-        .input-1:focus ,textarea,select{
+        .input:focus ,textarea,select{
             border: none;
             width: 78%;
             outline: none;
     }
         
-        .field{
+        .inputContainer{
             margin-bottom: 20px;
         }
         .para{
@@ -168,8 +178,8 @@
             color: green;
         }
         .btn-1{
-            width: 100%;
-            background-color: rgb(58, 58, 194);
+            width: 30%;
+            background-color: rgb(51, 51, 139);
             font-size: 20px;
             color: white;
             border-radius: 30px;
@@ -177,9 +187,18 @@
             padding: 5px 0px 5px 0px;
 
         }
+        .capt{
+            margin: auto;
+            width: 70vh;
+            /* margin-top: 70px; */
+        }
         .btn-2{
+            display: inline-block;
             border: none;
             font-size: 15px;
+            /* display: border; */
+            /* display: none; */
+            /* display: inline-block; */
         }
         .sign-in{
             text-align: center;
@@ -223,7 +242,7 @@
                 display: inline-block;
                 font-size: 15px;
             }
-            .div-main{
+            .signupFrm{
                 width: 98%;
                 margin: auto;
             }
@@ -267,7 +286,7 @@
                 display: inline-block;
                 font-size: 15px;
             }
-            .div-main{
+            .signupFrm{
                 width:70%;
                 margin: auto;
             }
@@ -280,7 +299,7 @@
         }
 
     
-        .input-1{
+        .input{
             border: none;
             width: 85%;
         }
@@ -294,7 +313,7 @@
                 margin: auto;
                 /* margin-left: 400px; */
              }
-             .div-main{
+             .signupFrm{
                 width:70%;
                 margin: auto;
             }
@@ -309,7 +328,7 @@
             .container{
                 width: 40%;
             }
-            .div-main{
+            .signupFrm{
                 width:70%;
                 margin: auto;
             }
@@ -323,7 +342,7 @@
             .container{
                 width: 45%;
             }
-            .div-main{
+            .signupFrm{
                 width:80%;
                 margin: auto;
             }
@@ -331,6 +350,11 @@
                    
                     width: 80%;
              }
+             .capt{
+            margin: auto;
+            width: 80%;
+            margin-top: 70px;
+        }
         }
         @media (max-width:500px) and (min-width:400px) {
             .container{
@@ -340,11 +364,146 @@
                    
                    width: 80%;
             }
-            .div-main{
+            .signupFrm{
                 width:80%;
                 margin: auto;
             }
+            .capt{
+            margin: auto;
+            width: 60%;
+            margin-top: 70px;
         }
+        .btn-1{
+            width: 60%;
+            background-color: rgb(58, 58, 194);
+            font-size: 20px;
+            color: white;
+            border-radius: 30px;
+            border: none;
+            padding: 5px 0px 5px 0px;
+
+        }
+        }
+
+        .signupFrm {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30vh;
+  margin-top: 70px;
+  /* border: 1px solid black; */
+}
+.form {
+  background-color: rgb(250, 250, 250);
+  width: 400px;
+  border-radius: 8px;
+  padding: 20px 40px;
+  box-shadow: 10px 20px 25px 10px rgba(23, 24, 26, 0.2);
+}
+
+
+.inputContainer {
+  position: relative;
+  height: 45px;
+  width: 90%;
+  margin-bottom: 17px;
+}
+/* Style the inputs */
+
+.input {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 100%;
+  width: 70%;
+ 
+  border: 1px solid #886d6d;
+  border-radius: 7px;
+  font-size: 16px;
+  padding: 0 20px;
+  outline: none;
+  background: none;
+  z-index: 1;
+  border: 1px solid rgb(0, 0, 0);
+}
+
+/* Hide the placeholder texts (a) */
+
+::placeholder {
+  color: transparent;
+  /* border: 1px solid black; */
+  width: 70%;
+} 
+/* Styling text labels
+*/
+.label {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  padding: 0 4px;
+  background-color: rgb(255, 245, 245);
+  color: #705f5f;
+  font-size: 16px;
+  transition: 0.5s;
+  z-index: 0;
+}
+
+.input:focus + .label {
+  top: -7px;
+  left: 3px;
+  z-index: 10;
+  font-size: 14px;
+  font-weight: 600;
+  color: rgb(3, 2, 3);
+}
+.btn{
+  font-size: 15px;
+  /* border: 1px solid red; */
+  background-color: transparent;
+  border: none;
+  margin-left: 300px;
+  margin-top: 15px;
+}
+.para{
+            display: none;
+            color: green;
+        }
+        .btn-1{
+            width: 100%;
+            background-color: rgb(58, 58, 194);
+            font-size: 20px;
+            color: white;
+            border-radius: 30px;
+            border: none;
+            padding: 5px 0px 5px 0px;
+
+        }
+        .capt{
+            margin: auto;
+            width: 25%;
+            margin-top: 70px;
+        }
+        @media (max-width:600px) and (min-width:400px) {
+            .capt{
+            margin: auto;
+            width: 80%;
+            margin-top: 90px;
+        }
+        
+        }
+        @media (max-width:1000px) and (min-width:600px){
+            .capt{
+                width: 50%;
+                margin-top: 100px;
+            }
+        }
+        @media (max-width:400px) and (min-width:200px){
+            .capt{
+                width: 90%;
+                margin-top: 100px;
+            }
+        }
+
     </style>
 </head>
 <body>
@@ -362,31 +521,74 @@
     <div>
         <h1>Or</h1>
     </div>
-    <div class="div-main"> 
+    <!-- <div class="signupFrm"> 
+
 
    
-        <fieldset class="field">
-            <legend>Name</legend>
-            <input type="text" class="input-1"  id="text1" placeholder="enter your Name">
+        <div class="inputContainer">
             
-        </fieldset  class="field">
-        <fieldset  class="field">
-            <legend>Phone Number</legend>
-            <input type="tel" class="input-1" id="text4" value=""  placeholder="enter your mobile no">
+            <input type="text" class="input"  id="text1" placeholder="enter your Name">
+            <label class="label">Name</label>
+        </div>
+        <div  class="inputContainer">
+           
+            <input type="tel" class="input" id="text4" value=""  placeholder="enter your mobile no">
+            <label class="label">phone Number</label>
             <button class="btn-2" onclick="clc2()" id="verify3">verify</button>
-        </fieldset>
-        <fieldset  class="field">
-            <legend>Email Id</legend>
-            <input type="email"   id="text2" value="" class="input-1" placeholder="enter your email">
+        </div>
+        <div  class="inputContainer">
+            
+            <input type="email"   id="text2" value="" class="input" placeholder="enter your email">
+            <label class="label">email</label>
             <button class="btn-2" onclick="clc3()" id="verify2" >verify</button>
-        </fieldset>
+        </div>
         <p class="para" id="para">A verification message sent to your mail</p>
-        <fieldset  class="field">
-            <legend>Password</legend>
-            <input type="password" placeholder="enter your password" class="input-1">
-        </fieldset>
+        <div  class="inputContainer">
+  
+            <input type="password" placeholder="enter your password" class="input">
+            <label class="label">password</label>
+        </div>
       <button class="btn-1">Sign Up</button>
-</div>
+      
+
+      
+</div> -->
+<div class="signupFrm">
+    <div class="form">
+      
+
+      <div class="inputContainer">
+        <input type="text"  id="text1" class="input" placeholder="a">
+        <label for="" class="label">Name</label>
+
+      </div>
+
+      <div class="inputContainer">
+        <input type="tel" id="text4" class="input"  placeholder="a">
+        <label for="" class="label">phone number</label>
+        <button class="btn" onclick="clc2()" id="verify3">verify</button>
+      </div>
+
+      <div class="inputContainer">
+        <input type="email" class="input" id="text2" placeholder="a">
+        <label for="" class="label">email</label>
+        <button class="btn"  onclick="clc3()" id="verify2">verify</button>
+      </div>
+      <p class="para" id="para">A verification message sent to your mail</p>
+      <div class="inputContainer">
+        <input type="password" class="input" placeholder="a">
+        <label for="" class="label">Password</label>
+      </div>
+
+     
+    </div>
+   
+  </div>
+  <div class="capt">
+       <button class="btn-1">Sign Up</button>
+   
+  </div>
+
 <div class="sign-in">
     <p>Already have an account ?</p><a href="sign-in.html" class="sign-in-1">Sign in</a>
 </div>
