@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=, initial-scale=1.0">
-    <title>Document</title>
+    <title>Forget_password</title>
     <style>
          .container-1{
           
@@ -151,6 +151,104 @@
     width: 80%;
 }
 }
+ 
+.signupFrm {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30vh;
+  /* border: 1px solid black; */
+}
+.form {
+  background-color: white;
+  width: 400px;
+  border-radius: 8px;
+  padding: 20px 40px;
+  box-shadow: 10px 20px 25px 10px rgba(23, 24, 26, 0.2);
+}
+
+
+.inputContainer {
+  position: relative;
+  height: 45px;
+  width: 90%;
+  margin-bottom: 17px;
+}
+/* Style the inputs */
+
+.input {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 100%;
+  width: 70%;
+ 
+  border: 1px solid #DADCE0;
+  border-radius: 7px;
+  font-size: 16px;
+  padding: 0 20px;
+  outline: none;
+  background: none;
+  z-index: 1;
+  border: 1px solid rgb(0, 0, 0);
+}
+
+/* Hide the placeholder texts (a) */
+
+::placeholder {
+  color: transparent;
+  /* border: 1px solid black; */
+  width: 70%;
+} 
+/* Styling text labels
+*/
+.label {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  padding: 0 4px;
+  background-color: rgb(255, 245, 245);
+  color: #705f5f;
+  font-size: 16px;
+  transition: 0.5s;
+  z-index: 0;
+}
+
+.input:focus + .label {
+  top: -7px;
+  left: 3px;
+  z-index: 10;
+  font-size: 14px;
+  font-weight: 600;
+  color: rgb(3, 2, 3);
+}
+.btn{
+  font-size: 15px;
+  /* border: 1px solid red; */
+  background-color: transparent;
+  border: none;
+  margin-left: 300px;
+  margin-top: 15px;
+}
+.para{
+            display: none;
+            color: green;
+        }
+        .btn-1{
+            width: 100%;
+            background-color: rgb(58, 58, 194);
+            font-size: 20px;
+            color: white;
+            border-radius: 30px;
+            border: none;
+            padding: 5px 0px 5px 0px;
+
+        }
+        .capt{
+            margin: auto;
+            width: 70vh;
+            margin-top: 20px;
+        }    
     </style>
 </head>
 <body>
@@ -162,22 +260,29 @@
     <div class="reset">
         <p>Reset Password</p>
     </div>
-    <div class="div-main"> 
-
-   
-        
-      
-        <fieldset  class="field">
-            <legend>New Password</legend>
-            <input type="password" placeholder="enter your password" class="input-1">
-        </fieldset>
-        <fieldset  class="field">
-            <legend>Confirm Password</legend>
-            <input type="password" placeholder="enter your password" class="input-1">
-        </fieldset>
-
-      <button class="btn-1">Done</button>
-</div>
+    <div class="signupFrm">
+        <div class="form">
+          
+    
+          
+            <div class="inputContainer">
+                <input type="password" class="input" placeholder="a">
+                <label for="" class="label">New Password</label>
+              </div>
+              <div class="inputContainer">
+                <input type="password" class="input" placeholder="a">
+                <label for="" class="label">Confirm Password</label>
+              </div>
+          <p class="para" id="para">A verification message sent to your mail</p>
+         
+         
+        </div>
+       
+      </div>
+      <div class="capt">
+        <button class="btn-1">Done</button>
+    
+    </div>
 <p class="footer">Copyright @ 2021 Bazarside All right reserved</p>
 </body>
 </html>
