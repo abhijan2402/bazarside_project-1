@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign Up</title>
+    <title>Document</title>
     <!-- <link rel="stylesheet" src="style.css"> -->
     <script>
         console.log('here')
@@ -25,7 +25,7 @@
         
         function clc2(){
             let text44=document.getElementById("text4").value;
-            
+           
             var phoneno = /^\d{10}$/;
             // var pattern=/[789][0-9]{9}/;
             var pattern="[789][0-9]{9}";
@@ -41,7 +41,11 @@
             if(text44.match("[789][0-9]{9}")){
                 document.getElementById('verify3').style.color='green'
                 document.getElementById('verify3').innerText="verified!!!";
+                document.getElementById('otp-div-1').style.display="block"
+                let div_con=document.getElementById('otp-div').style.display="block";
                 document.getElementById('cont-1').style.display="block"
+                
+                
                
             }
             else{
@@ -154,25 +158,25 @@
             font-size: 30px;
             color: blue;
         }
-        .signupFrm{
+        /* .signupFrm{
             width: 30%;
             margin: auto;
             
-        }
-        .input{
+        } */
+        /* .input{
             border: 1px solid grey;
             width: 78%;
-            /* margin-bottom: 10px; */
-        }
-        .input:focus ,textarea,select{
+            /* margin-bottom: 10px; 
+        } */
+        /* .input:focus ,textarea,select{
             border: none;
             width: 78%;
             outline: none;
     }
-        
-        .inputContainer{
+         */
+        /* .inputContainer{
             margin-bottom: 20px;
-        }
+        } */
         .para{
             display: none;
             color: green;
@@ -389,8 +393,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 30vh;
+  height: 40vh;
   margin-top: 70px;
+  margin-bottom: 40px;
   /* border: 1px solid black; */
 }
 .form {
@@ -447,14 +452,39 @@
   transition: 0.5s;
   z-index: 0;
 }
-
-.input:focus + .label {
+/* .input::selection{
+    left:15px;
+    top:-7px;
+} */
+ .input:focus + .label {
   top: -7px;
-  left: 3px;
+  left: 15px;
   z-index: 10;
   font-size: 14px;
   font-weight: 600;
   color: rgb(3, 2, 3);
+}
+  /* position:relative; */
+.input:not(:placeholder-shown)+label{
+    top: -7px;
+  left: 15px;
+  z-index: 10;
+  font-size: 14px;
+  font-weight: 600;
+  color: rgb(3, 2, 3);
+}
+  
+
+ 
+/* .input:focus{
+    z-index: -1;
+} */
+/* .input::selection +.label{
+   
+    z-index: -1;
+} */
+.label::selection{
+    z-index: -1;
 }
 .btn{
   font-size: 15px;
@@ -567,6 +597,13 @@
         <input type="tel" id="text4" class="input"  placeholder="a">
         <label for="" class="label">phone number</label>
         <button class="btn" onclick="clc2()" id="verify3">verify</button>
+      </div>
+      <div class="conta"> <p style="color: green; display: none;" id="otp-div-1">&nbsp &nbspEnter the 6 digit OTP!!!</p></div>
+      <div class="inputContainer" style="display: none;" id="otp-div">
+       
+        <input type="tel" id="text4" class="input"  placeholder="a">
+        <label for="" class="label">OTP</label>
+        <!-- <button class="btn" onclick="clc2()" id="verify3">verify</button> -->
       </div>
 
       <div class="inputContainer">
